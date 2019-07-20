@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #19202a;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+  position: absolute;
+  z-index: 3;
+
+  .logo {
+    width: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  nav {
+    align-self: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 300px;
+      padding: 0 10px;
+    }
+  }
+}
+
+
+
+#top-section {
+  position: relative;
+  height: 100vh;
+
+  .blur {
+    background-image: linear-gradient(45deg, rgba(25, 32, 42, 1) 0%, rgba(229, 43, 217, 0.32) 68%, rgba(125, 185, 232, 0) 100%), url('/img/top.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    filter: blur(50px);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .floating_img {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    align-items: flex-end;
+  }
+
+  .art_img {
+    width: 30%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#bio {
+  background-color: black;
+  position: relative;
+  z-index: 3;
+  padding: 100px 0;
+
+  .container {
+    display: flex;
+  }
+
+  p {
+    width: 50%;
+    color: white;
+    line-height: 1.8;
+    font-size: .9rem;
+    padding: 0 50px;
+
+  }
+
+  .logo-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0 50px;
+  }
+}
+
+#media {
+  padding: 100px 0px;
+  background-image: url("/img/bandana.jpeg");
+  background-size: cover;
+
+
+  .title {
+    background: black;
+    font-size: 1.1rem;
+    font-weight: 300px;
+    text-transform: uppercase;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+  }
+
+  .videos {
+    padding: 80px 50px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 50px;
+
+    .video {
+      border-radius: 4px;
+      overflow: hidden;
+      height: 300px;
+      -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+
+      iframe {
+        height: 100%;
+      }
+    }
+  }
+}
+
+#music {
+  padding: 80px 0;
+  position: relative;
+
+  .blur {
+    background-image: linear-gradient(45deg, rgba(255, 253, 60, 1) 20%, rgba(229, 43, 217, 0.32) 68%, rgba(125, 185, 232, 0) 100%), url('/img/album69.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(50px);
+    position: absolute;
+    z-index: 1;
+  }
+
+  .container {
+    display: flex;
+    padding: 0 50px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .sub-title {
+      font-size: 1.7rem;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 100px;
+    }
+
+    .singles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 400px;
+      margin-bottom: 80px;
+
+      li {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      text-align: center;
+    }
+  }
+
+  .album-covers {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
+    }
+  }
+}
+
+#tour {
+  background-color: black;
+  position: relative;
+  z-index: 4;
+
+  .top-img {
+    background-image: url("/img/group.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    filter: saturate(0%) contrast(150%);
+
+  }
+
+  .tour-dates {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+
+    .title {
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0 0 80px;
+    }
+
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      // max-width: 800px;
+    }
+
+    li {
+      color: white;
+      font-size: 1.3rem;
+
+      span {
+        padding: 0 10px;
+      }
+
+      .city {
+        font-weight: 700;
+      }
+
+      .location {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+
+      .date {
+        font-weight: 500;
+        color: red;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #1b1b1b;
+  position: relative;
+  z-index: 4;
+  padding: 25px;
+  text-align: center;
+
+  img {
+    max-width: 45px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
